@@ -2,11 +2,11 @@ import {createContext, useState, useEffect} from "react";
 
 
 
-export const UserContext = createContext()
+    export const UserContext = createContext()
 
 
 
-export const UserProvider = ({children}) =>{
+    export const UserProvider = ({children}) =>{
     const [user, setUser] = useState()
     const [userToken, setUserToken] = useState('')
     const [isLoggedIn,setIsLoggedIn] = useState(false)
@@ -22,3 +22,4 @@ export const UserProvider = ({children}) =>{
         setUserToken
     }}>{children}</UserContext.Provider>
 }
+
