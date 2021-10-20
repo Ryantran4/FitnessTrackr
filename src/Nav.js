@@ -10,7 +10,7 @@ const Title = (props) => {
         </header>
 
             <div id='navbar'>
-                <Link to="/Home" style={{ color: '#ff1515'}}>Home</Link>
+                <Link to="/Homepage" style={{ color: '#ff1515'}}>Home</Link>
                 <Link to="/activities" style={{ color: '#ff1515'}}>Activities</Link>
                 <Link to="/routines" style={{ color: '#ff1515'}}>Routines</Link>
                 <Link to="/users/login" style={{color: '#ff1515'}}>Login</Link>
