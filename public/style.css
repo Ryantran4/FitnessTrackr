@@ -7,16 +7,58 @@
 form {
     display: flex;
     flex-flow:column nowrap;
+    /* width: auto; */
+    /* height: auto; */
+    /* padding: 5rem; */
 }
 #navbar {
     display: flex;
     font-size: 24px;
     align-items: center;
     justify-content: space-around;
+    background-color: black;
 
 }
 #header {
     display: flex;
     justify-content: center;
+    background-color: black;
+    color: white;
+    padding-bottom: 0.6rem;
 }
-
+body {
+    background-color: black
+}
+/* #activity {
+    background-color: blue;
+} */
+#welcome {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    background-color: white;
+    color:black;
+}
+#image {
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 0.5rem;
+    background-color: black;
+}
+#footer {
+    background-color:black;
+    color: white;
+    bottom: 0;
+    width: 100vw;
+    height: 3.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-right: 0.9rem ;
+    padding-top: 6rem;
+}
+#logcard {
+    display: flex;
+    justify-content: center;
+}

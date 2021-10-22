@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import { getAllActivities } from '../utils/CallApi'
-import Activity from '../components/Activity'
+import Activity from './Activity'
 
 function Activities() {
 

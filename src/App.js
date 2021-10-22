@@ -14,6 +14,9 @@ const App = () => {
     const {setUserToken, setIsLoggedIn } = useContext(UserContext)
     return (
         <>
+        <Route exact path='/'>
+            <Homepage />
+        </Route>
         <Route exact path='/Homepage'>
             <Homepage />
         </Route>
