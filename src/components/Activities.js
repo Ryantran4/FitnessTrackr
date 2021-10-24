@@ -20,9 +20,6 @@ function Activities() {
             {activities.map((activity, idx)=>{
                 return <Activity activity={activity} key={idx}/>
             })}
-
-
-
         </div>
     )
 }

@@ -1,15 +1,14 @@
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 form {
+    background-color: white;
     display: flex;
-    flex-flow:column nowrap;
-    /* width: auto; */
-    /* height: auto; */
-    /* padding: 5rem; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 #navbar {
     display: flex;
@@ -27,11 +26,10 @@ form {
     padding-bottom: 0.6rem;
 }
 body {
-    background-color: black
+    background-color: black;
+    height: 100%;
 }
-/* #activity {
-    background-color: blue;
-} */
+
 #welcome {
     display: flex;
     justify-content: center;
@@ -61,4 +59,32 @@ body {
 #logcard {
     display: flex;
     justify-content: center;
+}
+#actcard {
+    background-color: white;
+    color: #228b22;
+    padding: 0.2rem;
+    margin: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+}
+#routine {
+    background-color: white;
+    color: #228b22;
+    padding: 0.2rem;
+    margin: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+}
+#routines {
+    color: #228b22;
+}
+button {
+    background-color: lightgreen;
+}
+#profile {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }

@@ -54,8 +54,8 @@ export const register = async (bodyData)=>{
     return data
 }
 
-export const getMe = async(token)=>{
-  const endpoint = '/users/me'
+export const getUserRoutinesWithToken= async(username, token)=>{
+  const endpoint = `/users/${username}/routines`
   const data = await request({
     endpoint:endpoint, 
     method:'GET',
@@ -64,8 +64,8 @@ export const getMe = async(token)=>{
   return data
 }
 
-export const getUserRoutinesWithToken= async(username, token)=>{
-  const endpoint = `/users/${username}/routines`
+export const getMe = async(token)=>{
+  const endpoint = '/users/me'
   const data = await request({
     endpoint:endpoint, 
     method:'GET',
@@ -82,6 +82,18 @@ export const getUserRoutines= async(username)=>{
   })
   return data
 }
+export const getAllRoutines = async () =>{
+  try{
+    const endpoint = `/routines`
+    const data = await request({
+      endpoint:endpoint, 
+      method:'GET',
+    })
+    return data
+  }catch(error){
+    throw error
+  }
+}
 export const getMyRoutines = async (token) =>{
   try{
       const user = await getMe(token)
@@ -91,18 +103,7 @@ export const getMyRoutines = async (token) =>{
       throw error
   }
 }
-  export const getAllRoutines = async () =>{
-    try{
-      const endpoint = `/routines`
-      const data = await request({
-        endpoint:endpoint, 
-        method:'GET',
-      })
-      return data
-    }catch(error){
-        throw error
-    }
-}
+
 export const getAllActivities = async () =>{
   try{
     const endpoint = `/activities`

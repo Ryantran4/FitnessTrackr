@@ -1,9 +1,17 @@
-import React, {userContext} from 'react';
-import {BrowserRouter, Link } from 'react-router-dom'
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom'
 import { UserContext } from './context/UserContext';
-import { Typography, AppBar,makeStyles } from '@material-ui/core';
 
-const Title = (props) => {
+
+const Title = () => {
+    const { setUser, isLoggedIn, setIsLoggedIn, setUserToken} = useContext(UserContext)
+    const signOut = () => {
+        setIsLoggedIn(false)
+        setUserToken('')
+        setUser('')
+        localStorage.setItem('userToken', '')
+    }
+
     return (
         <div id='container'>
         <header id="header">
@@ -14,9 +22,17 @@ const Title = (props) => {
                 <Link to="/Homepage" style={{ color: '#FFFFFF'}}>Home</Link>
                 <Link to="/activities" style={{ color: '#FFFFFF'}}>Activities</Link>
                 <Link to="/routines" style={{ color: '#FFFFFF'}}>Routines</Link>
-                <Link to="/users/login" style={{color: '#FFFFFF'}}>Login</Link>
-                <Link to="/users/register" style={{color: '#FFFFFF'}}>Register</Link>
-
+                    {
+                        isLoggedIn ? (<>
+                        <Link to="/myRoutines" style={{ color: '#FFFFFF'}}>My Routines</Link>
+                        <Link to="/" onClick ={signOut} style={{ color: '#FFFFFF'}}>Sign Off</Link>
+                        <Link to="/profile" style={{ color: '#FFFFFF'}}>Profile</Link>
+                        
+                        </>): (<>
+                        <Link to="/user/login" style={{ color: '#FFFFFF'}}>Login</Link>
+                        <Link to="/user/register" style={{ color: '#FFFFFF'}}>Register</Link>
+                        </>)
+                    }
             </div>
         </div>
     )
